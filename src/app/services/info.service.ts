@@ -19,7 +19,7 @@ export class InfoService
   {
     this.http.get('assets/data/info.pagina.json').subscribe(
       data => {
-        console.log(data.json());
+        // console.log(data.json());
         this.info = data.json()
         this.infoLista = true;
       }
@@ -30,7 +30,7 @@ export class InfoService
   {
     this.http.get('https://portafolio-83ae5.firebaseio.com/equipo.json').subscribe(
       data => {
-        console.log(data.json());
+        // console.log(data.json());
         this.equipo = data.json();
         this.infoNosotrosLista = true;
       }
