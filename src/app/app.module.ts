@@ -1,9 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 // Rutas
 import { appRouting } from './app.routes';
 
+// Servicios
+import { InfoService } from './services/info.service';
+
+// Componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,9 +28,9 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
     PortfolioItemComponent
   ],
   imports: [
-    BrowserModule, appRouting
+    BrowserModule, HttpModule, appRouting
   ],
-  providers: [],
+  providers: [InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
